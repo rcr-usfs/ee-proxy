@@ -1,0 +1,31 @@
+{
+  "name": "gee-proxy",
+  "version": "1.0.0",
+  "description": "EE proxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "node app.js",
+    "dev": "concurrently --kill-others 'npm run server' 'npm run web'",
+    "server": "nodemon server.js",
+    "web": "http-server web"
+  },
+  "keywords": [
+    "node",
+    "gee"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "@google/earthengine": "0.1.226",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "express-http-proxy": "1.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "5.2.0",
+    "http-server": "0.12.3",
+    "nodemon": "2.0.4"
+  }
+}
